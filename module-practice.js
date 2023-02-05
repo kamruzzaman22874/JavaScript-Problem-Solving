@@ -85,3 +85,29 @@
 // let array = [10, 50, 80, 90, 100, 120, -65, 54 , 45];
 // const result = arrayNumbers(array)
 // console.log(result);
+
+// 6. একটা ফাংশন লিখো। সেটার মধ্যে তিনটা প্যারামিটার নিবে। এই তিনটা প্যারামিটার হবে কোন একটা ত্রিভুজের তিনটা বাহু এর দৈর্য্য। এখন তোমার কাজ হচ্ছে ফাংশনের ভিতরে কিছু হিসাব নিকাশ করে ত্রিভুজের area (আয়তন) বের করা। কোন একটা ত্রিভুজের তিনটা বাহুর দৈর্য্য দেয়া থাকলে সেটা থেকে কিভাবে আয়তন বের করতে হয় সেই ফর্মুলা গুগল থেকে খুঁজে বের করো।
+
+function triangle(firstSide , secondSide , thirdSide) {
+    
+    let s  = (firstSide * secondSide * thirdSide) / 2;
+    let area = parseFloat(Math.sqrt(s * (s - firstSide) * (s - secondSide) * (s - thirdSide)).toFixed(2));
+    return area;
+}
+
+let calculate = triangle(8, 8, 8)
+console.log(calculate);
+
+// 7.কোন একটা সংখ্যা প্রাইম সংখ্যা (prime number) কিনা। সেটা চেক করার একটা ফাংশন লিখো।
+
+// function isPrime(number) {
+//     for (let i = 2; i < number; i++){
+//         if (number % i === 0) {
+//             return false
+//         }
+//     }
+//     return true
+// }
+
+// let result = isPrime(5)
+// console.log(result);
