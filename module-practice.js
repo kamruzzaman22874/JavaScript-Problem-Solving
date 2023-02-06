@@ -88,19 +88,22 @@
 
 // 6. একটা ফাংশন লিখো। সেটার মধ্যে তিনটা প্যারামিটার নিবে। এই তিনটা প্যারামিটার হবে কোন একটা ত্রিভুজের তিনটা বাহু এর দৈর্য্য। এখন তোমার কাজ হচ্ছে ফাংশনের ভিতরে কিছু হিসাব নিকাশ করে ত্রিভুজের area (আয়তন) বের করা। কোন একটা ত্রিভুজের তিনটা বাহুর দৈর্য্য দেয়া থাকলে সেটা থেকে কিভাবে আয়তন বের করতে হয় সেই ফর্মুলা গুগল থেকে খুঁজে বের করো।
 
-function triangle(firstSide , secondSide , thirdSide) {
+// function triangle(firstSide , secondSide , thirdSide) {
     
-    let s  = (firstSide * secondSide * thirdSide) / 2;
-    let area = parseFloat(Math.sqrt(s * (s - firstSide) * (s - secondSide) * (s - thirdSide)).toFixed(2));
-    return area;
-}
+//     let s  = (firstSide * secondSide * thirdSide) / 2;
+//     let area = parseFloat(Math.sqrt(s * (s - firstSide) * (s - secondSide) * (s - thirdSide)).toFixed(2));
+//     return area;
+// }
 
-let calculate = triangle(8, 8, 8)
-console.log(calculate);
+// let calculate = triangle(8, 8, 8)
+// console.log(calculate);
 
 // 7.কোন একটা সংখ্যা প্রাইম সংখ্যা (prime number) কিনা। সেটা চেক করার একটা ফাংশন লিখো।
 
 // function isPrime(number) {
+//     if (number <= 1) {
+//         return false;
+//     }
 //     for (let i = 2; i < number; i++){
 //         if (number % i === 0) {
 //             return false
@@ -109,5 +112,81 @@ console.log(calculate);
 //     return true
 // }
 
-// let result = isPrime(5)
+// let result = isPrime(4)
 // console.log(result);
+
+
+// একটি বড় সংখ্যাক মানুষজন(৫০ বা তার বেশি) পিকনিকে যাবে। বাসের সংখ্যা মানুষের সংখার উপর নির্ভর করবে। ধরো  আমাদের বাস ও মাইক্রো আছে ।প্রতিটি  বাসের ক্যাপাসিটি ৫০ জন এবং প্রতিটি মাইক্রবাসের ক্যাপাসিটি ১১ জন এবং পাবলিক বাসের প্রতিটি টিকেটের মূল্য ২৫০ টাকা করে।মাইক্রবাসে ১১ জনের কম হলে মাইক্রবাসে যাওয়া যাবে না।  এখন তোমাকে একটি ফাংশন লিখতে হবে যার নাম হবে publicBusFare যেটি প্যরামিটার হিসেবে  একটা সংখ্যা (কতজন যাবে )   নিবে । মোট কতটাকা পাবলিক বাস ফেয়ারে যাবে সেটি তোমাকে রিটার্ন করবে ।
+
+
+// function publicBusFare(totalPassenger) {
+//     if (typeof totalPassenger === "number") {
+//         let remianPasser = 0;
+//         let bus = 50;
+//         let micro = 11;
+//         let publicCost = 250;
+//         if (totalPassenger >= 50) {
+//             let busPassenger = Math.floor(totalPassenger / bus) * 50;
+//             remianPasser = totalPassenger - busPassenger;
+
+//             let microBusPassenger = Math.floor(remianPasser / micro) * 11;
+//             remianPasser = remianPasser - microBusPassenger;
+//             let totalPublicBusCost = remianPasser * publicCost;
+//             return totalPublicBusCost;
+//         }
+
+//         else if (totalPassenger >= 11) {
+//             let microBusPassenger = Math.floor(totalPassenger / micro) * 11;
+//             remianPasser = totalPassenger - microBusPassenger;
+//             let totalPublicBusCost = remianPasser * publicCost;
+//             return totalPublicBusCost;
+//         }
+//         else if (totalPassenger < 11 && totalPassenger > 0) {
+//            let totalPublicBusCost = totalPassenger * 250
+//             return totalPublicBusCost;
+//         }
+//         else {
+//             return 'Please give the passenger value gratter than 0'
+//         }
+//     }
+// }
+// let calculate = publicBusFare(63)
+// console.log(calculate);
+
+// একটা ফাংশন বানাবে যেটি একটি অ্যারে অফ অবজেক্ট রিসিভ করে প্যারামিটার হিসেবে।প্রতিটি অবজেক্টে একটি মানুষের নাম  এবং বয়স থাকবে। এখন তোমার কাজ হচ্ছে এই অ্যারে থেকে সবচেয়ে ছোট যে person কে খুঁজে বের করা।
+// অব্জজেক্টটি/Input দেখতে এমনঃ
+
+
+// function smallestName(name) {
+//     let smallName = name[0]
+
+//     for (let i = 0; i < name.length; i++){
+//         let personName = name[i]
+//         if (personName.age < smallName.age) {
+//             smallName = personName;
+
+//         }
+//     }
+//     return smallName;
+// }
+
+// let names = [
+//     {name:'sakib', age:30},
+//     {name:'samiul', age:20},
+//     {name:'sah', age:5},
+//     {name:'samin', age:10}
+// ]
+
+// let result = smallestName(names);
+// console.log(result);
+
+let numbers = [10, 20, 35, 40, 120, 95,125]
+
+function secondHighest(numbers) {
+    let second_number = numbers.sort(function (a, b) {
+        return b - a;
+    })
+    return second_number[1]
+}
+let find = secondHighest(numbers);
+console.log(find);

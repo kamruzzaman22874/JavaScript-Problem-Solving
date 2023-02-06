@@ -81,14 +81,14 @@
 //     let smallName = person[0];
 //     for (let i = 0; i < person.length; i++) {
 //         let personName = person[i]
-//         if (personName.age < smallName.age) {
+//         if (personName.name < smallName.name) {
 // 				smallName = personName;
 // 		}
 //     }
 //     return smallName;
 // }
 // let findSmallPerson = persons(human)
-// console.log(findSmallPerson.name);
+// console.log(findSmallPerson);
 
 
 // 7. ফাংশন নেম দিতে হবে radianToDegree । এই ফাংশনে প্যারামিটার হিসেবে নিবে রেডিয়ান (radian)। তারপর সেটাকে ডিগ্রীতে (degree) কনভার্ট করে কত ডিগ্রী (degree) হয় সেই সংখ্যা রিটার্ন করবে। রিটার্ন করার সময় তোমাকে দশমিক এর পর দুই ঘর রিটার্ন করতে হবে।
@@ -145,10 +145,10 @@
 // let price = oilPrice(30,20,10)
 // console.log(price);
 
-// একটি বড় সংখ্যাক মানুষজন(৫০ বা তার বেশি) পিকনিকে যাবে। বাসের সংখ্যা মানুষের সংখার উপর নির্ভর করবে। ধরো  আমাদের বাস ও মাইক্রো আছে ।প্রতিটি  বাসের ক্যাপাসিটি ৫০ জন এবং প্রতিটি মাইক্রবাসের ক্যাপাসিটি ১১ জন এবং পাবলিক বাসের প্রতিটি টিকেটের মূল্য ২৫০ টাকা করে।মাইক্রবাসে ১১ জনের কম হলে মাইক্রবাসে যাওয়া যাবে না।  এখন তোমাকে একটি ফাংশন লিখতে হবে যার নাম হবে publicBusFare যেটি প্যরামিটার হিসেবে  একটা সংখ্যা (কতজন যাবে )   নিবে । মোট কতটাকা পাবলিক বাস ফেয়ারে যাবে সেটি তোমাকে রিটার্ন করবে ।
+// 10.  একটি বড় সংখ্যাক মানুষজন(৫০ বা তার বেশি) পিকনিকে যাবে। বাসের সংখ্যা মানুষের সংখার উপর নির্ভর করবে। ধরো  আমাদের বাস ও মাইক্রো আছে ।প্রতিটি  বাসের ক্যাপাসিটি ৫০ জন এবং প্রতিটি মাইক্রবাসের ক্যাপাসিটি ১১ জন এবং পাবলিক বাসের প্রতিটি টিকেটের মূল্য ২৫০ টাকা করে।মাইক্রবাসে ১১ জনের কম হলে মাইক্রবাসে যাওয়া যাবে না।  এখন তোমাকে একটি ফাংশন লিখতে হবে যার নাম হবে publicBusFare যেটি প্যরামিটার হিসেবে  একটা সংখ্যা (কতজন যাবে )   নিবে । মোট কতটাকা পাবলিক বাস ফেয়ারে যাবে সেটি তোমাকে রিটার্ন করবে ।
 
 
-// 10. function publicBusFare(totalPassenger){
+// function publicBusFare(totalPassenger){
 //     if (typeof totalPassenger === 'number') {
 // 			let remainPassenger = 0;
 // 			if (totalPassenger >= 50) {
@@ -197,6 +197,22 @@
 // let output = isBestFriend(firstName, seconName);
 // console.log(output);
 
+// 7.কোন একটা সংখ্যা প্রাইম সংখ্যা (prime number) কিনা। সেটা চেক করার একটা ফাংশন লিখো।
+
+// function isPrime(number) {
+//     for (let i = 2; i < number; i++){
+//         if (number % i === 0) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// let output = isPrime(2)
+// console.log(output);
 
 
+let x = 'John';
+let y = new String('John');
+
+console.log(typeof x);
 
